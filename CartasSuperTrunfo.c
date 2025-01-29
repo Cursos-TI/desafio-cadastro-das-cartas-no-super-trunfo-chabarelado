@@ -18,5 +18,57 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
+
+    // Variáveis 
+
+    int pontos_turisticos, populacao;
+    char estado, codigo[4], nome[30];
+    float pib, area;
+
+    /*
+    Interface criada usando recursos funcionais e não funcionais para obter as caracteristicas
+    da cidade através do usuário do programa.
+    */
+
+    printf("\n <- - Bem vindo ao Super Trunfo - -> \n");
+    printf("\n -> Tema: Cidades <- \n");
+    printf("\nDigite nos campos abaixo as caracteristicas da cidade.\n");
+
+    //Solicitção dos dados:
+
+    printf("- Estado (Ex: A,B,C...):");
+    scanf("%c", &estado);
+
+    printf("- Código da Carta (Ex: A01,B02,C01...):");
+    scanf("%s", &codigo);
+
+    printf("- Nome da Cidade:");
+    scanf(" %[^\n]", nome); // %[^\n] é utilizado para ser lido idenpendente do que for escrito com exceção do \n
+
+    printf("- População:");
+    scanf("%d", &populacao);
+
+    printf("- Área:");
+    scanf("%f", &area);
+
+    printf("- PIB:");
+    scanf("%f", &pib);
+   
+    printf("- Pontos Turisticos:");
+    scanf("%d", &pontos_turisticos);
+
+    // Confirmação dos dados:
+
+    printf("\n\n-> Aqui estão as características cadastradas da cidade:\n");
+    printf("> Estado: %c\n", estado);
+    printf("> Código da Carta: %s\n", codigo);
+    printf("> Nome da Cidade: %s\n", nome);
+    printf("> População: %d\n", populacao);
+    printf("> Área: %.2f\n", area);
+    printf("> PIB: %.2f\n", pib);
+    printf("> Pontos Turisticos: %d\n", pontos_turisticos);
+
+
+
     return 0;
 }
