@@ -23,7 +23,7 @@ int main() {
 
     int pontos_turisticos, populacao;
     char estado, codigo[4], nome[30];
-    float pib, area;
+    float pib, area, pib_per_capita, densidade; 
 
     /*
     Interface criada usando recursos funcionais e não funcionais para obter as caracteristicas
@@ -57,17 +57,24 @@ int main() {
     printf("- Pontos Turisticos:");
     scanf("%d", &pontos_turisticos);
 
-    // Confirmação dos dados:
+    // Cálculo do PIB e Densidade Populacional:
 
-    printf("\n\n-> Aqui estão as características cadastradas da cidade:\n");
+    densidade = populacao / area;
+    pib_per_capita = pib / populacao;
+
+
+    // Confirmação e exibição dos dados:
+
+    printf("\n-> Aqui estão as características cadastradas da cidade:\n");
     printf("> Estado: %c\n", estado);
     printf("> Código da Carta: %s\n", codigo);
     printf("> Nome da Cidade: %s\n", nome);
     printf("> População: %d\n", populacao);
-    printf("> Área: %.2f\n", area);
-    printf("> PIB: %.2f\n", pib);
+    printf("> Área: %.2f km²\n", area);
+    printf("> PIB: %.2f reais\n", pib);
+    printf("> PIB Per Capita: %.3f reais\n", pib_per_capita);
     printf("> Pontos Turisticos: %d\n", pontos_turisticos);
-
+    printf("> Densidade Populacional: %.2f pessoas/km²\n\n", densidade);
 
 
     return 0;
